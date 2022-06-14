@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    padding: 20%;
+    margin: 50%;
+    
+}
+
+body{
+    background-color: #121212; 
+    color: #f5f5f5;
+}
+
+.header{
+    padding: 10px;
+    background-color: bisque;
+    width: 145px;
+    margin: 8px;
+}
+
+.header h1{
+    display:inline;
+    font-size: 48px;
+    width: fit-content;
+
+}
