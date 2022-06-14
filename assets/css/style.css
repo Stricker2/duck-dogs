@@ -1,10 +1,10 @@
 
-*{
+/* *{
     box-sizing: border-box;
     padding: 20%;
     margin: 50%;
     
-}
+} */
 
 .body{
     background-color: #121212; 
@@ -26,7 +26,29 @@
     width: fit-content;
 }
 
-.dog-image {
-    width: 30%;
+main {
+    display: flex;
+    margin: 5px;
+    width: 100vw;
+    columns: 2;
+}
 
+.dog {
+    width: 50%;
+    margin: 5px;
+}
+
+.zoo {
+    width: 50%;
+    margin: 5px;
+}
+
+.dog-image {
+    width: 60%;
+
+}
+
+.zoo-image {
+    width: 60%;
+    height: 30%;
 }
