@@ -3,22 +3,31 @@
 var dogButtonEl = document.getElementById('dogbutton')
 var dogImage = document.getElementById('dog-image')
 var dogImageURL = 'https://dog.ceo/api/breeds/image/random'
-var duckButtonEl = document.getElementById('duckbutton')
+var zooButtonEl = document.getElementById('zoobutton')
+var zooImageURL = "https://zoo-animal-api.herokuapp.com/animals/rand"
+var zooImage = document.getElementById('zoo-image')
+
 
 // - add button functionality
 dogButtonEl.addEventListener('click', function() {
-    fetch(dogImageURL).then(function(response) {
-        console.log(response);
-        response.json().then(function(data) {
-          console.log(data.message);
-          dogImage.src = data.message
-        });
+  fetch(dogImageURL).then(function(response) {
+      console.log(response);
+      response.json().then(function(data) {
+        console.log(data);
+        dogImage.src = data.message
       });
-    
+  });  
 })
 
-duckButtonEl.addEventListener('click', function() {
-    console.log('duck button has been clicked');
+zooButtonEl.addEventListener('click', function() {
+  console.log('duck button has been clicked');
+  fetch(zooImageURL).then(function(response) {
+    console.log(response);
+    response.json().then(function(data) {
+      console.log(data);
+      zooImage.src = data.image_link
+    })
+  })
 })
 
 // - fetch random dog image from API after button click
