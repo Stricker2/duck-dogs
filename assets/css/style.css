@@ -14,13 +14,13 @@ body{
     
 
 }
-
-*{
+/* 
+ *{
     box-sizing: border-box;
     padding: 20%;
     margin: 50%;
     
-} 
+  */
 
 
 h1{
