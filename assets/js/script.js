@@ -52,6 +52,24 @@ var saveAnimal = function(animalData) {
   }
   saveAnimalBtn.addEventListener('click', handleSave)
   }
-// - fetch random dog image from API after button click
+
+  //  display local storage
+function display(saveDogBtn) {
+  var savesection = document.getElementById("save-section");
+  sessionStorage.setItem(response)
+}
+
+function createItem() {
+  localStorage.setItem('response', '');
+
+  function getValue() {
+    
+  }
+}
+
+
+
+
+  // - fetch random dog image from API after button click
 // - fetch random duck image from API after button click
 // - save something to localstorage (TBD)
