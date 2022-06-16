@@ -55,13 +55,3 @@ function display() {
   var localData = localStorage.getItem('animals')
   console.log(localData)
 }
-
-
-    
-
-
-
-
-  // - fetch random dog image from API after button click
-// - fetch random duck image from API after button click
-// - save something to localstorage (TBD)
