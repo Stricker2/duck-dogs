@@ -8,6 +8,7 @@ var zooImageURL = "https://zoo-animal-api.herokuapp.com/animals/rand"
 var zooImage = document.getElementById('zoo-image')
 var saveDogBtn = document.getElementById('save-dog-button')
 var saveAnimalBtn = document.getElementById('save-animal-button')
+var savesection = document.getElementById("save-section");
 
 // - add button functionality
 dogButtonEl.addEventListener('click', function() {
@@ -22,7 +23,6 @@ dogButtonEl.addEventListener('click', function() {
 })
 
 var saveDog = function(dogData) {
-console.log(dogData);
 var handleSave = function() {
 var savedDogs = JSON.parse(localStorage.getItem('dogs')|| '[]')
 savedDogs.push(dogData)
@@ -32,11 +32,8 @@ saveDogBtn.addEventListener('click', handleSave)
 }
 
 zooButtonEl.addEventListener('click', function() {
-  console.log('duck button has been clicked');
   fetch(zooImageURL).then(function(response) {
-    console.log(response);
     response.json().then(function(data) {
-      console.log(data);
       zooImage.src = data.image_link
       saveAnimal(data.image_link)
     })
@@ -44,28 +41,23 @@ zooButtonEl.addEventListener('click', function() {
 })
 
 var saveAnimal = function(animalData) {
-  console.log(animalData);
   var handleSave = function() {
   var savedAnimals = JSON.parse(localStorage.getItem('animals')|| '[]')
   savedAnimals.push(animalData)
   localStorage.setItem('animals', JSON.stringify(savedAnimals))
   }
   saveAnimalBtn.addEventListener('click', handleSave)
+  saveAnimalBtn.addEventListener('click', display)
   }
 
   //  display local storage
-function display(saveDogBtn) {
-  var savesection = document.getElementById("save-section");
-  sessionStorage.setItem(response)
+function display() {
+  var localData = localStorage.getItem('animals')
+  console.log(localData)
 }
 
-function createItem() {
-  localStorage.setItem('response', '');
 
-  function getValue() {
     
-  }
-}
 
 
 
