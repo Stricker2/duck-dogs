@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duck Dogs</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Zoo Dogs</title>
 </head>
 <body>
-    <header>DUCK DOGS</header>
+
+<!-- header -->
+  <header class="title">
+      <h1>ZOO DOGS</h1>
+  </header>
+<!-- end header -->
+
+  <main>
+    <!-- dog section -->
+    <section class="dog">
+        <div class="dogbox">
+            <p><b>Click to generate a new pup!</b></p>
+            <div class="image-box">
+                <img id="dog-image" class="dog-image" src="./assets/images/dog-placeholder-image-2.jpeg" />
+            </div>
+        </div>
+      <button id="dogbutton" class="raise button" type="button"><b>New Dog</b></button>
+      <button id="save-dog-button" class="raise button" type="button"><b>Save Dog</b></button>
+    </section>
+    
+    <!-- end dog section -->
+
+
+    <!-- duck section -->
+    <section class="zoo">
+      <div class="zoobox">
+        <p><b>Click to generate a new animal!</b></p>
+        <div class="image-box">
+          <img id="zoo-image" class="zoo-image" src="./assets/images/zoo-placeholder-image.jpeg" />
+        </div>
+      </div>
+      <button id="zoobutton" class="raise button" type="button"><b>New Zoo Animal</b></button>
+      <button id="save-animal-button" class="raise button" type="button"><b>Save Animal</b></button>
+    </section>
+    
+    <!-- end duck section -->
+  </main>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
