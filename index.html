@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>Zoo Dogs</title>
 </head>
 <body>
-   
+
 <!-- header -->
   <header class="title">
-
-      <h1 style="border: navajowhite; border-width: 20px; border-style: solid;"> ZOO DOGS</h1>
-
-      
-
+      <h1>ZOO DOGS</h1>
   </header>
 <!-- end header -->
 
@@ -32,41 +28,35 @@
 <!-- end hero section -->
 
   <main>
-
-
     <!-- dog section -->
     <section class="dog">
         <div class="dogbox">
-            <h2>Click the button below to generate a new pup!</h2>
+            <p><b>Click to generate a new pup!</b></p>
             <div class="image-box">
-                <img id="dog-image" class="dog-image" src="./assets/images/placeholder-dog-image.jpg" />
+                <img id="dog-image" class="dog-image" src="./assets/images/dog-placeholder-image-2.jpeg" />
             </div>
         </div>
-      <button id="dogbutton" class="raise" type="button">Generate New Dog</button>
+      <button id="dogbutton" class="raise button" type="button"><b>New Dog</b></button>
+      <button id="save-dog-button" class="raise button" type="button"><b>Save Dog</b></button>
     </section>
-    <button id="save-dog-button">Save Dog</button>
+    
     <!-- end dog section -->
 
 
     <!-- duck section -->
     <section class="zoo">
-      <h2>Click the button below to generate a new animal!</h2>
-      <div class="image-box">
-        <img id="zoo-image" class="zoo-image" src="./assets/images/zoo-placeholder-image.jpeg" />
+      <div class="zoobox">
+        <p><b>Click to generate a new animal!</b></p>
+        <div class="image-box">
+          <img id="zoo-image" class="zoo-image" src="./assets/images/zoo-placeholder-image.jpeg" />
+        </div>
       </div>
-      <button id="zoobutton" class="raise" type="button">Generate New Zoo Animal</button>
+      <button id="zoobutton" class="raise button" type="button"><b>New Zoo Animal</b></button>
+      <button id="save-animal-button" class="raise button" type="button"><b>Save Animal</b></button>
     </section>
-    <button id="save-animal-button">Save Animal</button>
+    
     <!-- end duck section -->
   </main>
-
-
-  <!-- favorite animal section -->
-
-
-
-
-<!-- <script src="https://cdn.tailwindcss.com"></script> -->
-<script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
