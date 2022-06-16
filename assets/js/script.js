@@ -42,22 +42,19 @@ zooButtonEl.addEventListener('click', function() {
   })
 })
 
-// add ability to save zoo animal to local storage
-var saveAnimal = function(animalData) {
-  var handleSave = function() {
-  var savedAnimals = JSON.parse(localStorage.getItem('animals')|| '[]')
-  savedAnimals.push(animalData)
-  localStorage.setItem('animals', JSON.stringify(savedAnimals))
-  }
-  saveAnimalBtn.addEventListener('click', handleSave)
-<<<<<<< HEAD
-=======
-  saveAnimalBtn.addEventListener('click', display)
-  }
+// // add ability to save zoo animal to local storage
+// var saveAnimal = function(animalData) {
+//   var handleSave = function() {
+//   var savedAnimals = JSON.parse(localStorage.getItem('animals')|| '[]')
+//   savedAnimals.push(animalData)
+//   localStorage.setItem('animals', JSON.stringify(savedAnimals))
+//   }
+//   saveAnimalBtn.addEventListener('click', handleSave)
+//   saveAnimalBtn.addEventListener('click', display)
+//   }
 
-  //  display local storage
-function display() {
-  var localData = localStorage.getItem('animals')
-  console.log(localData)
->>>>>>> develop
-}
+//   //  display local storage
+// function display() {
+//   var localData = localStorage.getItem('animals')
+//   console.log(localData)
+// }

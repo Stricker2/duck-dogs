@@ -101,17 +101,10 @@ h1{
   transform: translateY(-0.25em);
 }
 
-<<<<<<< HEAD
-.saved-dog {
-    height: 30vh;
-}
-
-=======
 #save-section {
     position: absolute;
     bottom: 0;
 }
->>>>>>> develop
     
 #save-section h2 {
     font-size: xx-large;
