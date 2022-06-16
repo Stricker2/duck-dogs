@@ -1,5 +1,5 @@
 body{
-    background-color: black; 
+    background-color: dimgrey;
     color: #f5f5f5;
     margin: 5px;
     width: 100vw;
@@ -33,24 +33,30 @@ h1{
 
 .dogbox{
     color: navajowhite;
+
+
     
 
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
+.zoo{
+    font-size: 100%;
+    color: navajowhite;
+    position: relative;
+    right: -600px;
+    
+}
+
+.zoo h2{
+    margin-right: auto;
+}
+
+.header{
+    padding: 10px;
     background-color: bisque;
     width: 90%;
     margin: 8px;
 }
-
-/* .header h1{
-    display:inline;
-    font-size: 48px;
-    width: fit-content;
-    align-items: center;
-} */
 
 main {
     display: flex;
@@ -62,33 +68,77 @@ main {
 }
 
 .dog {
-    width: 50%;
+    width: 80%;
+    height: 50%;
     margin: 5px;
 }
 
 .zoo {
-    width: 50%;
+    width: 100%;
     margin: 5px;
 }
 
 .dog-image {
-
-    width: 40%;
-    
+    width: 377px;
+    height: 505px;
 
 }
 
 
 main{
     display: flex;
-    columns: 2;
-
-    width: 100%;
+    width: 60%;
 
 }
 
 .zoo-image {
-    width: 40%;
-    height: 30%;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    
+
 
 }
+
+.dog button{
+    background-color: navajowhite;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: navajowhite;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+
+}
+
+.zoo button{
+   margin: auto;
+   background-color: black;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: navajowhite;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+    
