@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple-v1.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Zoo Dogs</title>
 </head>
 <body>
 
 <!-- header -->
   <header class="title">
-      <h1 style="border:red; border-width: 20px; border-style: solid;"> ZOO DOGS</h1>
+      <h1> ZOO DOGS</h1>
   </header>
 <!-- end header -->
 
@@ -26,33 +26,33 @@
 <!-- end hero section -->
 
   <main>
-
-
     <!-- dog section -->
     <section class="dog">
         <div class="dogbox">
-            <h2>Click the button below to generate a new pup!</h2>
+            <p>Click to generate a new pup!</p>
             <div class="image-box">
                 <img id="dog-image" class="dog-image" src="./assets/images/placeholder-dog-image.jpg" />
             </div>
         </div>
-      <button id="dogbutton" class="raise" type="button">Generate New Dog</button>
+      <button id="dogbutton" class="raise button" type="button">Generate New Dog</button>
+      <button id="save-dog-button" class="raise button" type="button">Save Dog</button>
     </section>
-    <button id="save-dog-button">Save Dog</button>
+    
     <!-- end dog section -->
 
 
     <!-- duck section -->
     <section class="zoo">
-      <h2>Click the button below to generate a new animal!</h2>
+      <p>Click to generate a new animal!</p>
       <div class="image-box">
         <img id="zoo-image" class="zoo-image" src="./assets/images/zoo-placeholder-image.jpeg" />
       </div>
-      <button id="zoobutton" class="raise" type="button">Generate New Zoo Animal</button>
+      <button id="zoobutton" class="raise button" type="button">Generate New Zoo Animal</button>
+      <button id="save-animal-button" class="raise button" type="button">Save Animal</button>
     </section>
-    <button id="save-animal-button">Save Animal</button>
+    
     <!-- end duck section -->
   </main>
-<script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
