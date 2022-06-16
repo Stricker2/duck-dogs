@@ -9,7 +9,7 @@ var zooImage = document.getElementById('zoo-image')
 var saveDogBtn = document.getElementById('save-dog-button')
 var saveAnimalBtn = document.getElementById('save-animal-button')
 
-// - add button functionality
+// - add dog button functionality
 dogButtonEl.addEventListener('click', function() {
   fetch(dogImageURL).then(function(response) {
       // console.log(response);
@@ -21,16 +21,18 @@ dogButtonEl.addEventListener('click', function() {
   });  
 })
 
+// add ability to save dog to local storage
 var saveDog = function(dogData) {
 console.log(dogData);
 var handleSave = function() {
-var savedDogs = JSON.parse(localStorage.getItem('dogs')|| '[]')
-savedDogs.push(dogData)
-localStorage.setItem('dogs', JSON.stringify(savedDogs))
+  var savedDogs = JSON.parse(localStorage.getItem('dogs')|| '[]')
+  savedDogs.push(dogData)
+  localStorage.setItem('dogs', JSON.stringify(savedDogs))
 }
 saveDogBtn.addEventListener('click', handleSave)
 }
 
+// add zoo animal button functionality
 zooButtonEl.addEventListener('click', function() {
   console.log('duck button has been clicked');
   fetch(zooImageURL).then(function(response) {
@@ -43,6 +45,7 @@ zooButtonEl.addEventListener('click', function() {
   })
 })
 
+// add ability to save zoo animal to local storage
 var saveAnimal = function(animalData) {
   console.log(animalData);
   var handleSave = function() {
@@ -51,7 +54,4 @@ var saveAnimal = function(animalData) {
   localStorage.setItem('animals', JSON.stringify(savedAnimals))
   }
   saveAnimalBtn.addEventListener('click', handleSave)
-  }
-// - fetch random dog image from API after button click
-// - fetch random duck image from API after button click
-// - save something to localstorage (TBD)
+}
