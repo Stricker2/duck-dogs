@@ -8,7 +8,7 @@ var zooImageURL = "https://zoo-animal-api.herokuapp.com/animals/rand"
 var zooImage = document.getElementById('zoo-image')
 var saveDogBtn = document.getElementById('save-dog-button')
 var saveAnimalBtn = document.getElementById('save-animal-button')
-var savesection = document.getElementById("save-section");
+var savesection = document.getElementById("save-section")
 
 // - add dog button functionality
 dogButtonEl.addEventListener('click', function() {
@@ -17,19 +17,26 @@ dogButtonEl.addEventListener('click', function() {
       response.json().then(function(data) {
         // console.log(data);
         dogImage.src = data.message
-        saveDog(data.message)
+        saveDog(dogImage.src)
+        // loadDog(data.message)
       });
   });  
 })
 
 // add ability to save dog to local storage
 var saveDog = function(dogData) {
-var handleSave = function() {
-  var savedDogs = JSON.parse(localStorage.getItem('dogs')|| '[]')
-  savedDogs.push(dogData)
-  localStorage.setItem('dogs', JSON.stringify(savedDogs))
-}
-saveDogBtn.addEventListener('click', handleSave)
+  var handleSave = function() {
+    var savedDogs = JSON.parse(localStorage.getItem('dogs')|| '[]')
+    savedDogs.push(dogData)
+    localStorage.setItem('dogs', JSON.stringify(savedDogs))
+    var dogImgEl = document.createElement('img')
+    dogImgEl.classList.add('save-image')
+    dogImgEl.src = dogData
+    savesection.appendChild(dogImgEl)
+  }
+  
+  saveDogBtn.addEventListener('click', handleSave)
+  
 }
 
 // add zoo animal button functionality
@@ -42,16 +49,30 @@ zooButtonEl.addEventListener('click', function() {
   })
 })
 
-// // add ability to save zoo animal to local storage
-// var saveAnimal = function(animalData) {
-//   var handleSave = function() {
-//   var savedAnimals = JSON.parse(localStorage.getItem('animals')|| '[]')
-//   savedAnimals.push(animalData)
-//   localStorage.setItem('animals', JSON.stringify(savedAnimals))
-//   }
-//   saveAnimalBtn.addEventListener('click', handleSave)
-//   saveAnimalBtn.addEventListener('click', display)
-//   }
+// add ability to save zoo animal to local storage
+var saveAnimal = function(animalData) {
+  var handleSave = function() {
+    var savedAnimals = JSON.parse(localStorage.getItem('animals')|| '[]')
+    savedAnimals.push(animalData)
+    localStorage.setItem('animals', JSON.stringify(savedAnimals))
+    var animalImgEl = document.createElement('img')
+    animalImgEl.classList.add('save-image')
+    animalImgEl.src = animalData
+    savesection.appendChild(animalImgEl)
+  }
+  saveAnimalBtn.addEventListener('click', handleSave)
+  
+  // saveAnimalBtn.addEventListener('click', display)
+}
+
+var loadAnimal = function(animalImages) {
+  var handleLoad = function() {
+    var loadedAnimals = JSON.stringify(localStorage.setItem('animals')|| '[]')
+    loadedAnimals.push(animalImages)
+    localStorage.getItem('animals', JSON.parse(animalImages[i]))
+  }
+  saveAnimalBtn.addEventListener('click', handleLoad)
+}
 
 //   //  display local storage
 // function display() {
