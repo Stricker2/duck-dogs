@@ -110,6 +110,8 @@ h1{
 
 .save-header {
     text-align: center;
+    text-decoration: underline;
+    color: navajowhite;
 }
     
 #save-section h2 {

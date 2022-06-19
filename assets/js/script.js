@@ -13,12 +13,9 @@ var savesection = document.getElementById("save-section")
 // - add dog button functionality
 dogButtonEl.addEventListener('click', function() {
   fetch(dogImageURL).then(function(response) {
-      // console.log(response);
       response.json().then(function(data) {
-        // console.log(data);
         dogImage.src = data.message
         saveDog(dogImage.src)
-        // loadDog(data.message)
       });
   });  
 })
@@ -61,8 +58,6 @@ var saveAnimal = function(animalData) {
     savesection.appendChild(animalImgEl)
   }
   saveAnimalBtn.addEventListener('click', handleSave)
-  
-  // saveAnimalBtn.addEventListener('click', display)
 }
 
 var loadAnimal = function(animalImages) {
@@ -73,9 +68,3 @@ var loadAnimal = function(animalImages) {
   }
   saveAnimalBtn.addEventListener('click', handleLoad)
 }
-
-//   //  display local storage
-// function display() {
-//   var localData = localStorage.getItem('animals')
-//   console.log(localData)
-// }
