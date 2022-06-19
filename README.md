@@ -16,7 +16,13 @@ Create simple, yet entertaining random photo generators of dogs and zoo animals 
 
 ## Webpage
 
+NOTE: Screenshot below will not exactly represent what you see when you originally load in. The new image and save image buttons for the respective sections were clicked to generate images in the 'Saved Animals' section. When a new user first loads in they will see a placeholder image in each section and no images in the 'Saved Animals' section until they use the save buttons themselves.
+
 Link: https://stricker2.github.io/zoo-dogs/
+
+<img src="./assets/images/README-deployed-page-screenshot.png">
+
+
 
 ## Contributors
 
